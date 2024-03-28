@@ -9,6 +9,7 @@ RUN platformio platform install native
 
 # Preinstall the 'espressif32' platform and the specific Arduino framework version
 RUN platformio platform install espressif32 --with-package framework-arduinoespressif32@https://github.com/italocjs/arduino-esp32.git#idf-release/v4.4
+RUN pio platform install espressif32 --with-package=toolchain-xtensa-esp32 --with-package=toolchain-esp32ulp --with-package=framework-arduinoespressif32 --with-package=framework-espidf --with-package=tool-esptoolpy --with-package=tool-cmake --with-package=tool-ninja
 
 # Preinstall the 'googletest' library
 RUN platformio lib -g install googletest
