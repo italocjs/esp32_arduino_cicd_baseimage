@@ -1,12 +1,21 @@
 # esp32_arduino_cicd_baseimage
-This repository contains an base image for docker usage, that will have all the necessary tools ready to use for building, testing and flashing esp32 
+This repository contains an base image for esp32 development, its meant to build an base image with all the required tools, basic packages and libraries.  The goal of the base image is to speed up future build and test.
 
-Building the image locally:
+Login to docker:
 ```
-PS C:\code\esp32_arduino_cicd_baseimage> docker login
-Authenticating with existing credentials...
-Login Succeeded
-PS C:\code\esp32_arduino_cicd_baseimage>
+docker login
 ```
 
+Build the image:
+```
 docker build -t italocjs/track_env:latest .
+```
+
+
+Push the image:
+```
+docker push italocjs/track_env:latest
+```
+
+
+useful https://piolabs.com/blog/insights/unit-testing-part-3.html

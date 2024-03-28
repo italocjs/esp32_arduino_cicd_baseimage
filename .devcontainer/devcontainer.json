@@ -1,8 +1,0 @@
-{
-    "name": "PlatformIO Development",
-    "image": "yourdockerhubusername/yourimagename:latest",
-    "settings": {},
-    "extensions": ["platformio.platformio-ide"],
-    "forwardPorts": [],
-    "postCreateCommand": "platformio update"
-}

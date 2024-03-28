@@ -14,7 +14,7 @@ RUN platformio platform install espressif32 --with-package framework-arduinoespr
 RUN platformio lib -g install googletest
 
 # Copy a basic code so we can run the build
-COPY workspace/ /workspace/
+COPY sample/ /workspace/
 WORKDIR /workspace
 
 # Run a PlatformIO build for each environment to download dependencies
@@ -22,6 +22,7 @@ WORKDIR /workspace
 RUN platformio run -e native
 RUN platformio run -e esp32dev
 
+# This part of the process will NOT test agains any target, as this is meant to be an shared base image
 
 # Clean up unnecessary files to keep the image size down
 RUN rm -rf /workspace
